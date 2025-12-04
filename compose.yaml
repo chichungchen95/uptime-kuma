@@ -2,8 +2,11 @@ services:
   uptime-kuma:
     image: louislam/uptime-kuma:2
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512M
     volumes:
       - ./data:/app/data
     ports:
-      # <Host Port>:<Container Port>
       - "3001:3001"
