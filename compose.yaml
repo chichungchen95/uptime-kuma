@@ -5,7 +5,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 512M
+          memory: 64M
     volumes:
       - ./data:/app/data
     ports:
